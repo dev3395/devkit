@@ -1,44 +1,42 @@
 #!/bin/bash
 
-
 #History
-2017-03-11 v2: Cleaned up some
+# 2017-03-11 16:59:55: more cleanup. Working version.
 
-#This is a block comment with guidelines, including ones about block comments
+# GUIDELINES
+#	
+# Running This Script
+# To Run it from the terminal
+# 1. Navigate to the folder it's in
+# 2. Adjust the permissions with chmod a+x devki1.sh
+# 3. Type this to execute: ./devkit1.sh
+
+# Syntax Guidelines
+#	Case sensitive variables
+#	No spaces before or after the equals sign, so use A=3, not A = 3
+
+
+
+#Below is a comment block done with the "Void Quoted Here-Document" hack for shell block comments
 <<"COMMENT"
-	GUIDELINES
+ This text is commented out using the "Void Quoted Here-Document" approach. It's considered the most versatile and save method for block comments in shell. It will exclude everything, including ${parameter:=expansion} `command substitution` and $((arithmetic++ + --expansion)).
 
-	Block Comment Approach: Void Quoted Here-Document
-		The most versatile and safe method is putting the comment into a void quoted here-document, like this
-		This long comment text includes ${parameter:=expansion}
-		`command substitution` and $((arithmetic++ + --expansion)).
-		Could also do by enclosing in an "if false then fi" block but stray syntax issues could cause probles
-		See http://stackoverflow.com/questions/1444367/commenting-out-a-set-of-lines-in-a-shell-script for more info
+ Could also do by enclosing in an "if false then fi" block but stray syntax issues could cause problems
 
-	Running This Script
-	To Run it from the terminal
-	1. Navigate to the folder it's in
-	2. Adjust the permissions with chmod a+x HelloWorld.sh
-	3. Type this to execute: ./HelloWorld.sh
-	
-
-	Syntax Guidelines
-		Case sensitive variables
-		No spaces before after = sign: A=3, not A = 3
+ See http://stackoverflow.com/questions/1444367/commenting-out-a-set-of-lines-in-a-shell-script for more info
 COMMENT
 
 
-<<"COMMENT"
-echo "I've commented this out for now"
-echo "This too
-COMMENT
 
 #---------------------------------------------------------------
-<<"COMMENT"
-	PARAMETER EXAMPLES
-COMMENT
+#STARTUP LOGGING
 printf "\n\n_________________________________\n"
-printf "Start Time: `date` \n\n"
+printf "Starting\n"
+printf "Time: `date` \n\n"
+
+
+#---------------------------------------------------------------
+#PARAMETER EXAMPLES
 
 if [ $# -eq 0 ]
   then
@@ -52,60 +50,68 @@ if [ $# -eq 0 ]
 
 
 #---------------------------------------------------------------
-<<"COMMENT"
-	MATH EXAMPLES
-COMMENT
+printf "\n__MATH EXAMPLES__\n"
 
 A=3
 B=25 #Can put let before; not sure if changes anything
+echo "A: $A"
+echo "B: $B"
+
 Total=$(expr $A + $B)
-echo "The total of $A plus $B is $Total"
-echo 
+printf "The total of $A plus $B is $Total \n"
+
 #---------------------------------------------------------------
-<<"COMMENT"
+printf "\n__COMMAND EXAMPLES__\n"
 
-COMMAND EXAMPLES
-
-COMMENT
-
-#Can just run terminal commands normally here
+printf "You can just run terminal commands normally in the shell script. After this printf statement we'll get the current uptime by including the uptime command: \n"
+printf "Uptime: "
 uptime
 
-#Here's a calendar
-echo
-echo "Calendar below..."
-cal	
+# Other raw command examples to enable
 
-#Also embed commands by enclosing in backticks
-date
-echo "The date is `date`"
-echo "The ping is `ping 172.16.1.1 -c1`"
+# Generate a calendar
+# cal	
+# date
+
+
+# Raw commands can be included in an echo statement inside backticks
+# echo "The date is `date`"
+# echo "The ping is `ping 172.16.1.1 -c1`"
 
 
 #---------------------------------------------------------------
-<<"COMMENT"
-IF / THEN EXAMPLES
+printf "\n__IF THEN EXAMPLES__\n"
 
-Key Points:
- - Need bracks with spaces on the inside and a semicolon
- - Different operators for strings and math
-COMMENT
+#Key Points:
+# - Need brackets with spaces on the inside and a semicolon
+# - Different operators for strings and math
 
-#String Example
+
+# If Then With a String
 LastName="Seinfeld"
-if [ $LastName = "Seinfeld" ];
+printf "Last Name: $LastName \n"
+
+if [ $LastName = "Seinfeld" ]
 then
 	echo "Hello Jerry"
 fi
 
-#Math example
+# Math Equals Comparison
 A=5
-if [ $A -eq 5 ];
+if [ $A -eq 5 ]
 then
 	echo "Yes it equals 5"
 fi
-	
-#More math, condensed to line line
+
+# Math Greater Than Comparison
+A=6
+if [ $A -gt 4 ];
+then
+	echo "It's greater";
+fi
+
+
+# Condensed to line line
 A=6
 if [ $A -gt 4 ]; then echo "It's greater"; fi
 
