@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Change from mac in dev branch
 
 #This is a block comment with guidelines, including ones about block comments
 <<"COMMENT"
