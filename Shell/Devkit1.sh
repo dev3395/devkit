@@ -35,11 +35,10 @@ COMMENT
 <<"COMMENT"
 	PARAMETER EXAMPLES
 COMMENT
-echo
-echo
-echo
-echo "_________________________________"
-echo "Starting New HelloWorld run"
+printf "\n\n\n"
+printf "_________________________________\n"
+printf "Starting \n"
+printf "Time is  'date'"
 echo `date`
 echo
 
