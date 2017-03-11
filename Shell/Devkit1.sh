@@ -1,6 +1,8 @@
 #!/bin/bash
-#Change from mac in dev branch
-#Change from dekstop in main branch
+
+
+#History
+2017-03-11 v2: Cleaned up some
 
 #This is a block comment with guidelines, including ones about block comments
 <<"COMMENT"
@@ -35,18 +37,18 @@ COMMENT
 <<"COMMENT"
 	PARAMETER EXAMPLES
 COMMENT
-printf "\n\n\n"
-printf "_________________________________\n"
-printf "Starting \n"
-printf "Time is  'date'"
-echo `date`
-echo
+printf "\n\n_________________________________\n"
+printf "Start Time: `date` \n\n"
 
-echo "First paramater is $1"
-echo "Second parameter is $2"
-
-NumberOfParameters=$#
-echo "Number of parameters is $NumberOfParameters"
+if [ $# -eq 0 ]
+  then
+    echo "Input Parameters: None"
+  else
+	echo "Input Parameters: Supplied"
+	echo "Input Parameter #: $#"
+	echo "Input Parameter 1: $1"
+    echo "Input Parameter 2: $2"
+ fi
 
 
 #---------------------------------------------------------------
