@@ -1,0 +1,13 @@
+{
+"system_config": {
+		"computer_name":"Computer223",
+		"config_string2":"sample",
+		"system_number":21,
+		"misc_text":"blah"
+	},
+"user_config": {
+		"user_name":"Bob",
+		"user_misc":"abcd"
+	}
+}
+
