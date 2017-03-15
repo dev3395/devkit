@@ -36,7 +36,7 @@ else {
 }
 
 
-readConfig(CONFIG_FILE_NAME);
+//readConfig(CONFIG_FILE_NAME);
 //main($working_input);
 
 function readConfig()
