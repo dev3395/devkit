@@ -1,6 +1,6 @@
 <?php
 
-
+// 2017-03-18 14:32:04 Test update1
 function readConfig()
 {
 	global $config_log_file;
