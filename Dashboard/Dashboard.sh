@@ -3,34 +3,22 @@
 #History
 
 # 2017-03-11 18:43:19 Test change from web2
-# GUIDELINES
-#	
-# Running This Script
-# To Run it from the terminal
-# 1. Navigate to the folder it's in
-# 2. Adjust the permissions with chmod a+x devki1.sh
-# 3. Type this to execute: ./devkit1.sh
-
-# Syntax Guidelines
-#	Case sensitive variables
-#	No spaces before or after the equals sign, so use A=3, not A = 3
-
-
-
-
-
+# 2017-03-19 06:28:17 AM: Working
+# 
 
 if [ $# -eq 0 ]
 	then
 	#	echo "Input Parameters: None"
 	uptime
 	else
-	#echo "Input Parameters: Supplied"
-	#echo "Input Parameter #: $#"
-	echo "Input Parameter 1: $1"
-	#echo "Input Parameter 2: $2"
-	#whoami
-	#say "test"
-	afplay /System/Library/Sounds/Funk.aiff
+		#echo "Input Parameter #: $#"
+		#echo "Input Parameter 1: $1"
+
+		if [ $1 = "beep" ]
+		then
+		afplay /System/Library/Sounds/Basso.aiff
+		afplay /System/Library/Sounds/Pop.aiff
+		afplay /System/Library/Sounds/Pop.aiff
+		fi
  fi
 
