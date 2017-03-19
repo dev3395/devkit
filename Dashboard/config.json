@@ -1,0 +1,13 @@
+{
+"system_config": {
+		"computer_name":"Computer1",
+		"config_string2":"sample",
+		"system_number":1,
+		"log_file":"debug1.txt"
+	},
+"user_config": {
+		"user_name":"Not set",
+		"user_misc":"abcd"
+	}
+}
+
