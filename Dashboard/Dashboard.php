@@ -1,18 +1,24 @@
 #!/usr/bin/php
 <?php
 /*
-	HISTORY
-	StaticID: DX1RG20170313T1242s16
-	Purpose: PHP template
-	2017-03-13 12:42:34 : First version
 
-	INFO
-	To allow execution from command line, set first line to: #!/usr/bin/php
-	To call from command line: ./filename.php
-	Any text above the <?php line besides the #! line  will be included in the response, which you probabl don't want.
+
+# PURPOSE
+- Return dashboard info
+
+# HISTORY
+- StaticID: DX1RG20170313T1242s16
+- 2017-03-13 12:42:34 : First version
+- 2017-03-19 06:23:13 PM: Commented out log files; permissions issues calling from BTT
+
+# INFO
+To allow execution from command line, set first line to: #!/usr/bin/php
+To call from command line: ./filename.php
+Any text above the <?php line besides the #! line  will be included in the response, which you probably don't want.
+
 */
 	
-include '../PHP/DevKitCore.php';
+include 'DashboardCore.php';
 
 if ($argc > 1) {
 	print "Argument count: $argc\n";
@@ -31,18 +37,14 @@ $param = $argv[1];
 
 main();
 
-//print $param;
-
-
-timer($param);
+//timer($param);
 
 uptime();
-
 
 function main() {
 	global $logfile;
 	
-	print "Starting main loop\n";
+	// print "Starting main loop\n";
 	
 	readConfig(CONFIG_FILE_NAME);
 	
