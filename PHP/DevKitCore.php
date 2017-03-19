@@ -21,8 +21,9 @@ function readConfig()
 	//print $config_log_file . "\n\n\n";
 	
 	$logfile = $config_log_file;
-	print "Logging configured. See messages in: $logfile";
+	print "Logging configured. See messages in: $logfile\n";
 
+	print "Reminder -- new output is probably in the DEBUG LOG FILE *** : $logfile\n";
 	$msg= "----------------------\nStarting logging in $logfile";
 	logToFile($logfile, $msg);
 	
@@ -45,4 +46,16 @@ function logToFile($filename, $msg)
 	fclose($fd); 
 } 
 	
+	
+	function writeToFile($filename, $msg) 
+	{  
+		$fd = fopen($filename, "a"); 
+
+		date_default_timezone_set('UTC');
+		$str = "[" . date("Y/m/d h:i:s", mktime()) . "] " . $msg;  
+
+		fwrite($fd, $msg . "\n"); 
+		fclose($fd); 
+	} 
+		
 ?>
