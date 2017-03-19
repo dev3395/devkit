@@ -1,10 +1,13 @@
 #!/bin/bash
 
+#OLD: See PHP version
+
+
 #History
 
 # 2017-03-11 18:43:19 Test change from web2
 # 2017-03-19 06:28:17 AM: Working
-# 
+# 2017-03-19 08:53:15 AM: Switched to PHP version -- Generally more useful and regex is better there
 
 
 if [ $# -eq 0 ]
