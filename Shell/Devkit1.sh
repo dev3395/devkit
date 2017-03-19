@@ -1,21 +1,22 @@
 #!/bin/bash
 
 #History
+2017-03-19 06:50:10 AM: Updates
 
-# 2017-03-11 18:43:19 Test change from web2
-# GUIDELINES
+# SHELL GUIDELINES
 #	
 # Running This Script
-# To Run it from the terminal
-# 1. Navigate to the folder it's in
-# 2. Adjust the permissions with chmod a+x devki1.sh
-# 3. Type this to execute: ./devkit1.sh
+	# To Run it from the terminal
+	# 1. Navigate to the folder it's in
+	# 2. Adjust the permissions with chmod a+x devki1.sh
+	# 3. Type this to execute: ./devkit1.sh
 
 # Syntax Guidelines
-#	Case sensitive variables
-#	No spaces before or after the equals sign, so use A=3, not A = 3
+	#	Case sensitive variables
+	#	No spaces before or after the equals sign, so use A=3, not A = 3.
+	#	No $ before variable declaration but include it in output: myvar="ABC" and then echo $myvar
 
-
+##############################
 
 #Below is a comment block done with the "Void Quoted Here-Document" hack for shell block comments
 <<"COMMENT"
@@ -25,7 +26,6 @@
 
  See http://stackoverflow.com/questions/1444367/commenting-out-a-set-of-lines-in-a-shell-script for more info
 COMMENT
-
 
 
 #---------------------------------------------------------------
@@ -63,13 +63,11 @@ printf "The total of $A plus $B is $Total \n"
 #---------------------------------------------------------------
 printf "\n__COMMAND EXAMPLES__\n"
 
-printf "You can just run terminal commands normally in the shell script. After this printf statement we'll get the current uptime by including the uptime command: \n"
+printf "You can run terminal commands normally in a shell script. After this printf statement we'll get the current uptime by including the uptime command: \n"
 printf "Uptime: "
 uptime
 
 # Other raw command examples to enable
-
-# Generate a calendar
 # cal	
 # date
 

@@ -1,51 +1,13 @@
 #!/bin/bash
 
+# Include file with other functinos
+source RegexFunctions.sh
 
 KM=$KMVAR_Parm1
 
+# echo "Parameter input: $KM"
 
-
-echo "Got the parameter $KM"
-
-function regcheck {
-	if [[ $sample =~ $regex ]]
-		then
-			echo " matched in pattern: $sample"
-		else
-			echo " no match in pattern: $sample"
-	fi
-}
-
-
-# Unit Test
-echo "--- Unit test START"
-sample="ABCdef Vandelay 123458 8"
-regex='[7-9].'
-regcheck sample
-echo "--- Unit test END"
-echo
-
-# Main Purpose
-echo "--- Main START"
-sample="
-{
-	TITLE titletext1b
-	body1
-	}
-	}
-	{ section2
-	TITLE titletext2b
-	body2
-	}"
-
-sample="{ text TITLE titletext1b text more }"
-
-
-sample="{ text TITLE titletext1b text more }
-"
-
-echo "Sample:" $sample
-echo
-regex='(\{.*\s)(TITLE.*\s)(.*\s*)(\}?)'
-regcheck sample
-
+# Run example functions from included file
+regex_example1
+regex_example2
+regex_example3
