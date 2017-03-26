@@ -49,6 +49,21 @@ if [ $# -eq 0 ]
  fi
 
 
+if [ $# -eq 0 ]
+	then
+	#	echo "Input Parameters: None"
+	uptime
+	else
+		#echo "Input Parameter #: $#"
+		#echo "Input Parameter 1: $1"
+
+		if [ $1 = "beep" ]
+		then
+		afplay /System/Library/Sounds/Basso.aiff
+		afplay /System/Library/Sounds/Pop.aiff
+		afplay /System/Library/Sounds/Pop.aiff
+		fi
+ fi
 #---------------------------------------------------------------
 printf "\n__MATH EXAMPLES__\n"
 
