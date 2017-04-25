@@ -24,7 +24,8 @@ Move more of this to just be reflected in the template
 ### 1.1. Example
 
 This example encompasses some of the rules below as a quick overview:
-
+Note the next line with three tildes and then php is so it appears as code block in Markdown
+    
 ~~~php
 <?php
 namespace Vendor\Package;
