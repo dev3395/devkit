@@ -1,6 +1,5 @@
-#!/bin/bash
-
-#History
+#!/bin/bash/sh
+# History
 2017-03-19 06:50:10 AM: Updates
 
 # SHELL GUIDELINES
@@ -10,6 +9,19 @@
 	# 1. Navigate to the folder it's in
 	# 2. Adjust the permissions with chmod a+x devki1.sh
 	# 3. Type this to execute: ./devkit1.sh
+
+# To Run from the Mac Finder
+# 1. Adjust the permissions as above and then test in the Terminal
+# 2. Change the extension to .command
+
+# Execution Tips
+# Problems running .Command file
+# - If you duplicate the file you need to set the permissions on the new file
+# - Once a file has been edited in certain apps, you may get an error trying to run it as a .command file from the Finder. It will say it's from an untrusted developer (depending on Mac System Security settings).
+# - So far, I've seen it with the App Store version of CodeRunner. Not a problemw with the non-App Store version of CodeRunner, VSCode, or the Terminal.
+# - Might be an issue for any App Store text editor
+# - Do far have not found a way to get a .command file to run again from the Finder if it has that problem. Saving from another editor doesn't seem to fix it.
+
 
 # Syntax Guidelines
 	#	Case sensitive variables
