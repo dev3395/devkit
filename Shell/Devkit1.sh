@@ -1,6 +1,6 @@
-#!/bin/bash/sh
+#!/bin/bash
 # History
-2017-03-19 06:50:10 AM: Updates
+# 2017-03-19 06:50:10 AM: Updates
 
 # SHELL GUIDELINES
 #	
@@ -11,8 +11,8 @@
 	# 3. Type this to execute: ./devkit1.sh
 
 # To Run from the Mac Finder
-# 1. Adjust the permissions as above and then test in the Terminal
-# 2. Change the extension to .command
+# - Adjust the permissions as above and then test in the Terminal
+# - Change the extension to .command
 
 # Execution Tips
 # Problems running .Command file
@@ -29,6 +29,8 @@
 	#	No $ before variable declaration but include it in output: myvar="ABC" and then echo $myvar
 
 ##############################
+source functions.sh
+
 
 #Below is a comment block done with the "Void Quoted Here-Document" hack for shell block comments
 <<"COMMENT"
@@ -36,9 +38,13 @@
 
  Could also do by enclosing in an "if false then fi" block but stray syntax issues could cause problems
 
- See http://stackoverflow.com/questions/1444367/commenting-out-a-set-of-lines-in-a-shell-script for more info
+ See http://stackoverflow.com/que:20,50s/^/#/stions/1444367/commenting-out-a-set-of-lines-in-a-shell-script for more info
 COMMENT
 
+<<"COMMENT"
+Another block comment
+
+COMMENT
 
 #---------------------------------------------------------------
 #STARTUP LOGGING
@@ -46,6 +52,16 @@ printf "\n\n_________________________________\n"
 printf "Starting\n"
 printf "Time: `date` \n\n"
 
+
+
+# ============================================================
+# 
+# ============================================================
+
+# read_example
+# math_example
+# ifthen_example
+split_example
 
 #---------------------------------------------------------------
 #PARAMETER EXAMPLES
@@ -63,8 +79,7 @@ if [ $# -eq 0 ]
 
 if [ $# -eq 0 ]
 	then
-	#	echo "Input Parameters: None"
-	uptime
+		echo "Input Parameters: None"
 	else
 		#echo "Input Parameter #: $#"
 		#echo "Input Parameter 1: $1"
@@ -76,68 +91,3 @@ if [ $# -eq 0 ]
 		afplay /System/Library/Sounds/Pop.aiff
 		fi
  fi
-#---------------------------------------------------------------
-printf "\n__MATH EXAMPLES__\n"
-
-A=3
-B=25 #Can put let before; not sure if changes anything
-echo "A: $A"
-echo "B: $B"
-
-Total=$(expr $A + $B)
-printf "The total of $A plus $B is $Total \n"
-
-#---------------------------------------------------------------
-printf "\n__COMMAND EXAMPLES__\n"
-
-printf "You can run terminal commands normally in a shell script. After this printf statement we'll get the current uptime by including the uptime command: \n"
-printf "Uptime: "
-uptime
-
-# Other raw command examples to enable
-# cal	
-# date
-
-
-# Raw commands can be included in an echo statement inside backticks
-# echo "The date is `date`"
-# echo "The ping is `ping 172.16.1.1 -c1`"
-
-
-#---------------------------------------------------------------
-printf "\n__IF THEN EXAMPLES__\n"
-
-#Key Points:
-# - Need brackets with spaces on the inside and a semicolon
-# - Different operators for strings and math
-
-
-# If Then With a String
-LastName="Seinfeld"
-printf "Last Name: $LastName \n"
-
-if [ $LastName = "Seinfeld" ]
-then
-	echo "Hello Jerry"
-fi
-
-# Math Equals Comparison
-A=5
-if [ $A -eq 5 ]
-then
-	echo "Yes it equals 5"
-fi
-
-# Math Greater Than Comparison
-A=6
-if [ $A -gt 4 ];
-then
-	echo "It's greater";
-fi
-
-
-# Condensed to line line
-A=6
-if [ $A -gt 4 ]; then echo "It's greater"; fi
-
-
