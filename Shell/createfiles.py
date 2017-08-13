@@ -3,11 +3,12 @@
 # To run:
 # Set chmod a+x
 # Run with python createfiles.py in the folder (not ./)
-    
-import os
+
+import os       
 #--- set your code directory below
-# dr = "/users/dimitri/Test/"
-dr = "/Users/dimitri/Github/devkit/Shell/"
+
+dr = "TestFiles"
+
 #--- set the desired (base) name extension and shebang below (leave it ""if you don't want an automatically set shebang)
 name_initial = "Test File "
 extension = ".txt"
