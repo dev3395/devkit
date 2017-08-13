@@ -1,31 +1,148 @@
+
+
+/*
+Theme Name:
+Theme URI:
+Description:
+Version: 1.0
+Author:
+Author URI:
+*/
+
+/* Reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; padding: 0;  border: 0; outline: 0; font-size: 100%;
+	vertical-align: baseline; background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* My Standard Elements */
+
+:root {
+    --main-color:#06c;
+    --error-text: red;
+}
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+   
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+	text-align: left;    
+    max-width: 800px;
+    padding: 2em 2em 4em;
+	/* color: #000000; */
+    color: var(--main-color);
+}
+
+p {
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    /* font-size: 12px; */
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #CCCCCC;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color);
+    font-weight: 600;
+    line-height: 1.3;
+    font-size: 24px;     
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #ddd;
+  }
+  
+
+  tr {
+      padding-left: 49px;
+  }
+thead {
+    background-color:#3A3A64;
+    color:white;
+}
+
+/*My Custom Elements */
+/* .FilterTable {
+    background-color: #ADA2A2;
+    padding: 10px;
+    padding-left: 30px;
+    } */
+
+
+    #MyTableFilter th, tr, td{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: left;
+        min-width: 190px;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+
+    }
+
+  .error {
+    color: var(--error-text);
+    
+}
+
+.fuzzy-search {
+    font-size: 20px;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: center;
+    text-align: center;
+    width:550px;
+}
+}
+
+.bluetext {
+    color: #AF0010;
+    }
+    
+    
+
+    /*App Specific-Styles*/
+    
+    .done-true {
+        text-decoration: line-through;
+        color: red;
+        font-family: cursive;
+      }
+    
+
+
 html {
     background: #e6e9e9;
     background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
 }
 
-body {
-    background: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    color: #545454;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 2em 2em 4em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #00C3BF;
-    font-weight: 600;
-    line-height: 1.3;
-     
-}
-
-h2 {
-    margin-top: 1.3em;
-}
 
 a {
     color: #0083e8;
