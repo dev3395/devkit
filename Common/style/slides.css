@@ -1,0 +1,19 @@
+
+
+
+body {
+    /* background: #fff; */
+    /* background-color: #cccccc; */
+     color: var(--main-color);
+    background-repeat: no-repeat;
+    background-size: 180px 80px;
+    background-position: top;
+   /* background-image: url("http://acronis.com/sites/all/themes/custom/acronis/images/menu_logo.png"); */
+   /* background-image: url("file:///Users/dimitri/Github/FileSets/Static/images/Acronis-logo.jpg"); */
+}
+
+
+
+footer { 
+    display: block;
+}

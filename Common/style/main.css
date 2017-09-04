@@ -8,7 +8,7 @@ Version: 1.0
 Author:
 Author URI:
 */
-
+ 
 /* Reset styles
 // This will clear out formatting for styles. But then basic things will be wrong unless you define them -- e.g., indenting for lists
 
@@ -37,14 +37,7 @@ Author URI:
     --error-text: red;
 }
 
-
-@media print {
-    h1 {page-break-before: always;}
-}
-
 body {
-    background: #fff;
-    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.06); */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 100%;
    
@@ -54,10 +47,8 @@ body {
 	text-align: left;    
     max-width: 800px;
     padding: 2em 2em 4em;
-	/* color: #000000; */
-    color: var(--main-color);
-    /* color:green; */
 }
+
 
 blockquote {
 	margin: 0 7px 0 5px;
@@ -76,6 +67,10 @@ a:hover {
     background-color: #CCCCCC;
 }
 
+
+@media print {
+    h1 {page-break-before: always;}
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--main-color);
@@ -155,7 +150,7 @@ thead {
 
 
 table {
-    opacity: 0.5;
+    opacity: 0.9;
     filter: alpha(opacity=50);
   }
 table:hover {
@@ -173,6 +168,12 @@ tr:hover {
     color: #AF0010;
     }
     
+    
+    /* Font Awesome Styling */
+
+    .fa-cog {
+        color: blue;
+    }
     
 
     /*App Specific-Styles*/
@@ -205,9 +206,9 @@ samp {
 }
 
 img {
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
+    /* animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1; */
+    /* background: transparent; */
+    /* border: 10px solid rgba(0, 0, 0, 0.12); */
     border-radius: 4px;
     display: block;
     margin: 1.3em auto;
