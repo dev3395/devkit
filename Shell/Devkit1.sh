@@ -53,6 +53,10 @@ printf "Starting\n"
 printf "Time: `date` \n\n"
 
 
+#---------------------------------------------------------------
+#Redirect examples
+echo "test1" >mylog22.txt
+
 
 # ============================================================
 # 
@@ -91,3 +95,11 @@ if [ $# -eq 0 ]
 		afplay /System/Library/Sounds/Pop.aiff
 		fi
  fi
+
+#---------------------------------------------------------------
+# Open Example
+app=$1
+path=$2
+
+# Use a speicific app to open a specific file based on the first two parameters passed to the script
+open -a "$app" "$path"
