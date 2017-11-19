@@ -57,6 +57,8 @@ printf "Time: `date` \n\n"
 #Redirect examples
 echo "test1" >mylog22.txt
 
+# Debug examples
+say "test"
 
 # ============================================================
 # 
