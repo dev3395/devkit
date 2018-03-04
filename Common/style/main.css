@@ -7,7 +7,7 @@ Version: 1.0
 Author:
 Author URI:
 */
- 
+
 /* Reset styles
 // This will clear out formatting for styles. But then basic things will be wrong unless you define them -- e.g., indenting for lists
 
@@ -32,8 +32,9 @@ Author URI:
 /* My Standard Elements */
 
 :root {
-    --main-color:#113251;
-    --error-text: red;
+   --main-color:#113251;
+   --zzmain-color:#36ee25;
+   --error-text: red;
 }
 
 body,#wrapper  {
@@ -43,11 +44,11 @@ body,#wrapper  {
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 100%; 
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 auto;
     line-height: 1.1;
 	text-align: left;    
-    max-width: 800px;
+    /* max-width: 800px; */
     padding: 2em 2em 4em;
 }
 
@@ -59,11 +60,13 @@ blockquote {
 }
 
 
-p, ul, ol {
+/* p, ul, ol { */
+p {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: var(--main-color);       
     text-decoration: red;
+    text-decoration-color: green;
     
 }
 
@@ -95,7 +98,7 @@ h1 {
 /* // For nvAlt title header used from ~/Library/Application Support/nvALT/template.html template.html */
 h1.doctitle {
 	background: rgba(236, 236, 231, 0.83);
-	font-size: 14px;
+	font-size: 24px;
 	font-weight: bold;
 	color: rgb(221, 197, 197);
 	line-height: 28px;
@@ -124,7 +127,10 @@ h3 {
 
 ul, ol {
     line-height: auto;
-    -moz-text-decoration-color: red;
+    /* -moz-text-decoration-color: red; */
+    text-decoration-color: red;
+    text-decoration-color: rgb(61, 54, 74);
+    color: var(--main-color);   
     -webkit-margin-before: 0.0 em;
     -webkit-margin-after: 0.0em;
     -webkit-margin-start: 0px;
@@ -132,8 +138,10 @@ ul, ol {
 }
 
 
+
   tr {
       padding-left: 49px;
+      font-size: 12px;
   }
 thead {
     background-color:#3A3A64;
@@ -147,6 +155,12 @@ thead {
     padding-left: 30px;
     } */
 
+.bigbutton {
+font-size: 48px;
+border: 5px border-style red;
+border-style: solid;
+
+}
 
     #MyTableFilter th, tr, td{
         padding-top: 0px;
@@ -158,10 +172,12 @@ thead {
     }
 
     th {
-        background-color: rgb(8, 73, 10);
+        background-color: rgb(8, 9, 73);
         color: white;
 
     }
+
+
 
   .error {
     color: var(--error-text);
@@ -180,8 +196,11 @@ thead {
 
 
 table {
-    opacity: 0.9;
+    opacity: 1.0;
     filter: alpha(opacity=50);
+    color:black;
+    border: black;
+    border-color: black;
   }
 table:hover {
     opacity: 1.0;
@@ -191,6 +210,7 @@ table:hover {
 
 tr:hover {
     background-color: #ddd;
+    border: width border-style color;
   }
   
 
@@ -254,4 +274,16 @@ img {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
     }
+}
+
+ code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+  }
+  
 }
