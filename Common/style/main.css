@@ -33,7 +33,6 @@ Author URI:
 
 :root {
    --main-color:#113251;
-   --zzmain-color:#36ee25;
    --error-text: red;
 }
 
@@ -43,11 +42,11 @@ body,#wrapper  {
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 100%; 
+  	/* font-size: 100%;  */
     font-size: 14px;
     margin: 0 auto;
     line-height: 1.1;
-	text-align: left;    
+  	text-align: left;    
     /* max-width: 800px; */
     padding: 2em 2em 4em;
 }
@@ -89,10 +88,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    /* border-bottom-width: 1px; */
-    font-weight: bold;
-    padding-top: 2em;
-    border-bottom-style: solid;
+  padding-top: 10px;  
+  font-weight: bold;
+  border-top-style: solid;
 }
 
 /* // For nvAlt title header used from ~/Library/Application Support/nvALT/template.html template.html */
