@@ -25,7 +25,6 @@ include 'devkit_core.php';
 
 // var_dump($argv);
 
-
 const CONFIG_FILE_NAME = "config.json";
 
 global $config_log_file;
