@@ -1,0 +1,389 @@
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+/* @import url("file:///Users/dimitri/files/style/more.css"); */
+/* @import url("http://localhost/more.css"); */
+
+/* 
+Import Notes
+
+
+TIPS:
+- @import statements must be first lines of css
+- VSMPE imports this file from ~/.mume/style.less
+- Updates: Changes here need a refresh of the VSMPE preview to appear
+
+SYNTAX:
+Works for FontAwesome in VSMPE and Marked
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+
+This works in VSMPE (note file:/// prefix)
+@import url("file:///Users/dimitri/web/more.css");
+
+This works in VSMPE and Marked2
+@import url("http://localhost/more.css");
+
+If an element is define in an included stylesheet and not overridden in a later one, the first style will used
+*/
+
+
+
+/*
+Theme Name:
+Theme URI:
+Description:
+Version: 1.0
+Author:
+Author URI:
+*/
+
+/* Reset styles
+// This will clear out formatting for styles. But then basic things will be wrong unless you define them -- e.g., indenting for lists
+
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var, b, u, i, center,
+    dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0; padding: 0;  border: 0; outline: 0; font-size: 100%;
+        vertical-align: baseline; background: transparent;
+    }
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+    :focus { outline: 0; }
+    ins { text-decoration: none; }
+    del { text-decoration: line-through; }
+    table { border-collapse: collapse; border-spacing: 0; }
+*/
+
+/* My Standard Elements */
+
+
+  
+  
+:root {
+  --main-color: green;
+  --main-color: #113251;
+  --main-color: #00204D;
+
+  --header-color: #111551;
+  --header-color: #511124;
+  --error-text: blue;
+  --error-text: red;
+}
+
+h2 {
+  font-size:44;
+  
+
+}
+
+body,
+#wrapper {
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "iA Writer Duospace"; */
+
+  font-size: 12px;
+  color: var(--main-color);
+  /* color: yellow; */
+  margin: auto;
+  line-height: 1.1;
+  text-align: left;
+  /* max-width: 1700px; */
+  padding: 2em 2em 4em;
+  
+}
+
+textarea {
+  width: 500px;
+  
+  height: 50px
+}
+
+blockquote {
+  margin: 0 7px 0 5px;
+  padding: 0 16px 0 10px;
+  border-left: 5px solid;
+  font-size: 100%;
+}
+
+p {
+  text-decoration: red;
+  text-decoration-color: green;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #cccccc;
+}
+
+@media print {
+  h1 {
+    page-break-before: always;
+
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* color: var(--header-color); */
+  color: #00204D;
+  /* line-height: 1.3; */
+  font-size: 12x;
+  padding-top: 1em;
+  
+  /* padding-bottom: 0.1em; */
+}
+
+h1 {
+  padding-top: 10px;
+  font-weight: bold;
+  border-top-style: solid;
+}
+
+/* // For nvAlt title header used from ~/Library/Application Support/nvALT/template.html template.html */
+h1.doctitle {
+  background: rgba(236, 236, 231, 0.83);
+  /* font-size: 24px; */
+  font-weight: bold;
+  color: rgb(221, 197, 197);
+  line-height: 28px;
+  margin: 0;
+  padding: 10px;
+border-bottom: solid 1px #aaa;
+  border-bottom: solid 1px #821b1b;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h2,
+h3 {
+  /* padding-top: 0.1em; */
+  color: var(--main-color);    
+  /* font-size: 18px; */
+  padding-top: 1em;
+  /* text-decoration: #0083e8; */
+  font-size: 16;
+  color: #00204D;
+  
+}
+
+
+ul,
+ol {
+  line-height: auto;
+  -moz-text-decoration-color: red;
+  text-decoration-color: red;
+  -webkit-margin-before: 0 em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+tr {
+  padding-left: 49px;
+  font-size: 12px;
+}
+
+thead {
+  /* background-color: #3a3a64; */
+  color: white;
+}
+
+/*My Custom Elements */
+.FilterTable {
+    background-color: #ADA2A2;
+    padding: 10px;
+    padding-left: 30px;
+    }
+
+.bigbutton {
+  font-size: 48px;
+  border: 5px border-style red;
+  border-style: solid;
+}
+
+#MyTableFilter th,
+tr,
+td {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: left;
+  min-width: 15px;
+  
+}
+
+th {
+  background-color: rgb(8, 9, 73);
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+  
+}
+
+.error {
+  color: var(--error-text);
+  padding-bottom: 20px;
+  padding-right:100px;
+  break-after: always;
+  
+}
+
+.fuzzy-search {
+  font-size: 10px;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  vertical-align: center;
+  text-align: center;
+  width: 850px;
+  color: gray;  
+}
+
+table {
+  opacity: 1;
+  filter: alpha(opacity=50);
+  color: black;
+  border: black;
+  border-color: black;
+}
+table:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+tr:hover {
+  background-color: #ddd;
+  border: width border-style color;
+}
+
+.bluetext {
+  color: #af0010;
+}
+
+/* Font Awesome Styling */
+
+.fa-cog {
+  color: blue;
+}
+
+/*App Specific-Styles*/
+
+.done-true {
+  text-decoration: line-through;
+  color: red;
+  font-family: cursive;
+}
+
+html {
+  background: #e6e9e9;
+  /* background-image: linear-gradient(
+    270deg,
+    rgb(230, 233, 233) 0%,
+    rgb(216, 221, 221) 100%
+  ); */
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #0083e8;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+samp {
+  display: none;
+}
+
+img {
+  /* animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1; */
+  /* background: transparent; */
+  /* border: 10px solid rgba(0, 0, 0, 0.12); */
+  border-radius: 4px;
+  display: block;
+  margin: 1.3em auto;
+  max-width: 95%;
+}
+
+@keyframes colorize {
+  0% {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  100% {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+}
+
+pre,code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 120%;
+  color: black;
+  
+}
+
+
+.specblock {
+  font-size: 16x;
+  columns: 2;
+  background-color: gray;
+}
+
+
+.Col1 {
+  color: gray;
+  width: 30px;
+}
+
+.Col2 {
+  width: 500px;
+ }
+
+.Col3 {
+ width: 300px;
+ }
+
+ .Col4 {
+   width: 30px;
+ }
+
+ .Col5 {
+   width: 70px;
+ }
+
+ .Col6 {
+   width: 170px;
+ }
+
+ .Col7 {
+  width: 70px;
+}
+
+.myfields {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 10pt;
+  
+}
